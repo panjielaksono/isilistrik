@@ -1,0 +1,48 @@
+name: isilistrik
+description: "A Flutter prototype for electricity meter balances and simulated token top-ups."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+    # Untuk Icon (menggantikan <i class="fa-solid">)
+  font_awesome_flutter: ^10.6.0
+
+  # Untuk Font (menggantikan Segoe UI/Roboto import)
+  google_fonts: ^6.1.0
+
+  # Untuk format Rupiah (Rp 50.000)
+  intl: ^0.19.0
+
+  # (Opsional) Untuk State Management sederhana agar data sinkron
+  provider: ^6.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.7
+
+flutter:
+  uses-material-design: true
+
+# --- KONFIGURASI ICON ---
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/iconBaru.png" # Pastikan file ini ada
+  min_sdk_android: 21
+
+# --- KONFIGURASI SPLASH SCREEN ---
+flutter_native_splash:
+  color: "#0066FF" # Warna Primary App Kita (Biru)
+  image: "assets/white.png" # Logo di tengah splash
+  android_12:
+      color: "#0066FF" # Warna Background Layar
+      icon_background_color: "#0066FF" # PENTING: Warna lingkaran di belakang icon
+      image: "assets/white.png"
